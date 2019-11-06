@@ -5,3 +5,9 @@ mvn clean package -DskipTsets=true
 java -jar target/spring-boot-rest-ssl-example-0.0.1-SNAPSHOT.jar
 curl -k https://localhost:8443/ping
 ```
+
+## To Run as docker
+```
+docker build -t dmilan/spring-boot-rest-ssl-example .
+docker run -p 8443:8443 dmilan/spring-boot-rest-ssl-example -jar app/spring-boot-rest-ssl-example-0.0.1-SNAPSHOT.jar
+```
