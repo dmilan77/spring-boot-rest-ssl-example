@@ -1,4 +1,6 @@
-FROM openjdk:8
+FROM centos:7.6.1810
+#FROM openjdk:8
+RUN yum install java-1.8.0-openjdk-devel -y
 # target/spring-boot-rest-ssl-example-0.0.1-SNAPSHOT.jar
 ENV APP_HOME /dockerapp
 COPY target/spring-boot-rest-ssl-example-0.0.1-SNAPSHOT.jar  $APP_HOME/app/
